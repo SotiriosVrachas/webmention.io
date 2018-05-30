@@ -11,7 +11,7 @@ jQuery(function($){
 
   $.getJSON("https://webmention.io/api/count?jsonp=?", {
     base: base,
-    targets: urls.join(",")
+    target: urls.join(",")
   }, function(data){
     $("*[data-webmention-count]").each(function(i,e){
       $(e).text(data.count[$(e).data('url')]);
